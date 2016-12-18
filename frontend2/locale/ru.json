@@ -1,0 +1,15 @@
+{
+  "login":"вход",
+  "sign up":"регистрация",
+  "username":"имя пользователя",
+  "password":"пароль",
+  "first name":"имя",
+  "last name":"фамилия",
+  "email":"email",
+  "submit":"отправить",
+  "save":"сохранить",
+  "logout":"выйти",
+  "retype":"повторите",
+  "not yet a member":"еще не зарегистрированы?",
+  "already a member":"уже зарегистрированы?"
+}

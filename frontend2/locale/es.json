@@ -1,0 +1,15 @@
+{
+  "login":"entrar",
+  "sign up":"registrar",
+  "username":"nombre de usuario",
+  "password":"contraseña",
+  "first name":"nombre",
+  "last name":"apellido",
+  "email":"email",
+  "submit":"someter",
+  "save":"guardar",
+  "logout":"cerrar session",
+  "retype":"reescribir",
+  "not yet a member":" aun no es el miembro?",
+  "already a member":"&#xbf; ya eres miembro?"
+}

@@ -1,0 +1,72 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath([group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: '1.2.3.RELEASE'])
+    }
+}
+
+//apply plugin: 'war'
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+//war {
+//    baseName = 'leafcalendar'
+//    version = '1.0'
+//}
+
+jar {
+    baseName = 'leafcalendar'
+    version = '1.0'
+}
+
+//noinspection GroovyUnusedAssignment
+sourceCompatibility = 1.8
+compileJava.options.encoding = 'UTF-8'
+group = 'com.bitbucket.teamleave'
+version = '1.0'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+configurations {
+    providedRuntime
+}
+
+final def springVersion = '4.1.6.RELEASE';
+final def springBootVersion = '1.2.3.RELEASE';
+
+dependencies {
+    compile(
+            [group: 'javax.mail', name: 'mail', version: '1.4.7'],
+            [group: 'org.json', name: 'json', version: '20141113'],
+            [group: 'com.google.guava', name: 'guava', version: '18.0'],
+            [group: 'commons-codec', name: 'commons-codec', version: '1.10'],
+            [group: 'com.oracle', name: 'jdbc-connector-java', version: '1.0'],
+            [group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'],
+            [group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.5.3'],
+            [group: 'org.springframework', name: 'spring-tx', version: springVersion],
+            [group: 'org.springframework', name: 'spring-web', version: springVersion],
+            [group: 'org.springframework', name: 'spring-core', version: springVersion],
+            [group: 'org.springframework', name: 'spring-jdbc', version: springVersion],
+            [group: 'org.springframework', name: 'spring-webmvc', version: springVersion],
+            [group: 'org.springframework', name: 'spring-context', version: springVersion],
+            [group: 'org.springframework', name: 'spring-context-support', version: springVersion],
+            [group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: springBootVersion],
+            [group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: springBootVersion]
+    )
+    testCompile(
+            [group: 'junit', name: 'junit', version: '4.12'],
+            [group: 'org.springframework', name: 'spring-test', version: springVersion],
+            [group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springBootVersion]
+    )
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
+}

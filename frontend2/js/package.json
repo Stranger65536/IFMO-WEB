@@ -1,0 +1,33 @@
+{
+  "name": "Leafcalendar",
+  "version": "0.0.1",
+  "description": "Leaf Calendar",
+  "repository":"https://bitbucket.org/TeamLeave/leafcalendar",
+  "dependencies": {
+    "flux": "^2.0.1",
+    "keymirror": "~0.1.0",
+    "object-assign": "^1.0.0",
+    "react": "^0.13.0",
+    "react-bootstrap":"latest",
+    "jquery":"^1.10.0",
+    "underscore":"latest"
+  },
+  "devDependencies": {
+    "browserify": "^6.2.0",
+    "envify": "^3.0.0",
+    "reactify": "^0.15.2",
+    "gulp":"latest",
+    "vinyl-source-stream":"latest"
+  },
+  "scripts": {
+    "build": "gulp browserify",
+    "preInstall":"gulp"
+  },
+  "author": "Dmitrii Khizhniakov",
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
+  }
+}

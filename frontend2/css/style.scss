@@ -1,0 +1,369 @@
+$mainGreen:#10cc00;
+$mainBlack:#333;
+$mainGrey:#ccc;
+$mainWhite:#fbfbfb;
+$mainRed: rgb(200, 28, 20);
+$selectYellow: rgba(247, 255, 61,.4);
+$errorRed: rgba(200, 28, 20, 0.20);
+$successGreen:rgba(0,200,0,.2);
+$linkColor: #1a61dd;
+
+@mixin gradient($dir,$color1,$color2){
+  background: -moz-linear-gradient($dir,  $color1 50%, $color2 50%); /* FF3.6+ */
+  background: -webkit-linear-gradient($dir,  $color1 50%, $color2 50%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient($dir,  $color1 50%, $color2 50%); /* Opera 11.10+ */
+  background: -ms-linear-gradient($dir,  $color1 50%, $color2 50%); /* IE10+ */
+  background: linear-gradient($dir,  $color1 50%, $color2 50%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=0 ); /* IE6-9 */
+}
+
+html {
+  height: 100%;
+  body
+  {
+    .hided {
+      display: none !important;
+    }
+    height: 100%;
+    background-color: $mainWhite;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    span {
+      -webkit-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
+      user-select: text;
+    }
+    a {
+      color: $linkColor;
+      cursor: pointer;
+      transition-duration: .15s;
+      &:hover {
+        color: darken($mainGreen,20);
+        text-decoration: none;
+      }
+    }
+    .btn {
+      padding: 0.4em 3em;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      outline: none !important;
+      &.switch {
+        padding: .4em 1em;
+        color: $mainBlack;
+        font-weight: bold;
+      }
+      &.btn-primary {
+        @include gradient(top,$mainGreen,darken($mainGreen,1));
+        border: solid 1px $mainGreen;
+        letter-spacing: .05em;
+        color: $mainBlack;
+        &[disabled] {
+          background-color: darken($mainGreen,20);
+          border: solid 1px darken($mainGreen,20);
+          opacity: .5;
+        }
+        &:hover {
+          @include gradient(top,darken($mainGreen,8),darken($mainGreen,10));
+          border: solid 1px darken($mainGreen,9);
+        }
+      }
+    }
+    select {
+      border-top-left-radius: 20px !important;
+      border-bottom-right-radius: 20px !important;
+    }
+    .notify {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: .5em;
+    }
+    .alert {
+      position: absolute;
+      left: 50%;
+      top: 10px;
+      min-width: 200px;
+      z-index: 10000;
+    }
+    div.contextmenu {
+      position:absolute;
+      background: #fff;
+      border:solid 1px #ddd;
+      -webkit-box-shadow: 0 2px 6px #cdcdcd;
+      -moz-box-shadow: 0 2px 6px #cdcdcd;
+      box-shadow: 0 2px 6px #cdcdcd;
+      z-index: 2;
+      div.contextitem {
+        padding:6px 8em 6px 30px;
+        white-space: nowrap;
+        cursor:pointer;
+        margin:5px 0;
+        &:hover {
+          background: #efefef;
+        }
+      }
+    }
+    font-family: "Dosis","Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+    nav.navbar.navbar-default {
+      border-radius: 0;
+      background-color: $mainBlack;
+      border: none;
+      div.container {
+        width: 100%;
+        ul.nav.navbar-nav {
+          width: 100%;
+          li {
+            top: 5px;
+            span.caption {
+              color: $mainGreen;
+              font-size: 18px;
+            }
+            &.logout {
+              top: 0;
+              float: right;
+            }
+          }
+        }
+      }
+    }
+    .formContainer {
+      text-align: center;
+      .formCaption {
+        font-size: 25px;
+        padding-bottom: 10px;
+      }
+      .row {
+        margin: 10px 0;
+      }
+    }
+    input {
+      padding: .5em 1.5em;
+      border: solid 1px $mainGrey;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      outline: none;
+      &.error {
+        background-color: $errorRed;
+      }
+      &.success {
+        background-color: $successGreen;
+      }
+    }
+    div.row {
+      width: 100%;
+      padding-bottom: 15px;
+      div {
+        display: inline-block;
+        &.leftSide {
+          width: 200px;
+          float: left;
+          position: absolute;
+        }
+        &.rightSide {
+          width: 100%;
+          float: right;
+          padding-left: 200px;
+        }
+      }
+      &.topLine {
+        div {
+          &.leftSide {
+            text-align: center;
+            color: $mainRed;
+            font-size: 18px;
+            font-weight: bold;
+          }
+          &.rightSide {
+            text-align: center;
+            button {
+              margin:0 5px;
+            }
+            .time {
+              padding: 0 10px;
+            }
+          }
+        }
+      }
+      &.centralLine {
+        height: 100%;
+        padding: 0;
+        div {
+          &.leftSide {
+            text-align: center;
+            .CList {
+              button,.calendList {
+                display: block;
+              }
+              .create {
+                margin-bottom: 10px;
+                @include gradient(top,$mainRed,darken($mainRed,1));
+                border: solid 1px $mainRed;
+                font-weight: bold;
+                color: $mainWhite;
+                &:hover {
+                  @include gradient(top,darken($mainRed,8),darken($mainRed,10));
+                  border: solid 1px darken($mainRed,9);
+                }
+              }
+              div.calendList {
+                div {
+                  display: block;
+                }
+                .list {
+                  .item {
+                    padding: 3px 7px;
+                    margin: 3px 0;
+                    border:solid 1px transparent;
+                    border-top-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    .colored {
+                      display: inline-block;
+                      width: 10px;
+                      height: 10px;
+                      margin-right: 5px;
+                      border: solid 1px $mainGrey;
+                    }
+                    &:hover {
+                      background-color: lighten($mainGrey,10);
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &.rightSide {
+            .Calend {
+              width: 100%;
+              thead {
+                tr {
+                  th {
+                    text-align: right;
+                    padding-right: 5px;
+                  }
+                }
+              }
+              tr {
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                td {
+                  border: solid 1px $mainGrey;
+                  height: 100%;
+                  width: 14%;
+                  .inner {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    padding: 2px;
+                    overflow: hidden;
+                    div.labelOverlay {
+                      width: 100%;
+                      display: block;
+                      text-align: right;
+                    }
+                    .calendarEvent {
+                      white-space: nowrap;
+                      margin: 2px 0;
+                      height: 20px;
+                      span.time {
+                        padding-right: 5px;
+                        font-weight: bold;
+                      }
+                      transition-duration: .05s;
+                      display: block;
+                      overflow: hidden;
+                      padding:0 3px;
+                      &:hover .eventInner{
+                        width: auto !important;
+                        white-space: normal;
+                        background-color: lighten($mainBlack,8);
+                        color: $mainWhite;
+                        position: absolute;
+                      }
+                    }
+                  }
+                  &.notCurrent {
+                    background: lighten($mainGrey,14);
+                    .inner {
+                      span.label {
+                        color: $mainGrey;
+                      }
+                    }
+                  }
+                  &.Current {
+                    .inner {
+                      span.label {
+                        color: $mainBlack;
+                      }
+                    }
+                    &.selected {
+                      background-color: lighten($selectYellow,5);
+                    }
+                  }
+                  &.Today {
+                      background: rgba(159, 255, 159, 0.4);
+                    .inner {
+                      span.label {
+                        color: lighten($mainBlack,3);
+                      }
+                    }
+                  }
+                  transition-duration: .08s;
+                  &:hover {
+                    background: lighten($mainGrey,14);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    div.modal {
+      div.modal-dialog {
+        div.modal-content {
+          div.modal-body {
+            form {
+              div.row,.form-group {
+                width: 100%;
+                display: block;
+                margin: 0;
+                input,select {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  html {
+    body {
+      nav.navbar.navbar-default {
+        li {
+          display: inline-block;
+          &.logout {
+            float: right;
+          }
+        }
+      }
+      div.row {
+        &.centralLine {
+          margin: 0;
+          padding: 0 15px;
+        }
+        div.leftSide {
+          display: none;
+        }
+        div.rightSide {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,282 @@
+html {
+  height: 100%; }
+  html body {
+    height: 100%;
+    background-color: #fbfbfb;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: "Dosis","Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif; }
+    html body .hided {
+      display: none !important; }
+    html body span {
+      -webkit-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
+      user-select: text; }
+    html body a {
+      color: #1a61dd;
+      cursor: pointer;
+      transition-duration: .15s; }
+      html body a:hover {
+        color: #086600;
+        text-decoration: none; }
+    html body .btn {
+      padding: 0.4em 3em;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      outline: none !important; }
+      html body .btn.switch {
+        padding: .4em 1em;
+        color: #333;
+        font-weight: bold; }
+      html body .btn.btn-primary {
+        background: -moz-linear-gradient(top, #10cc00 50%, #10c700 50%);
+        /* FF3.6+ */
+        background: -webkit-linear-gradient(top, #10cc00 50%, #10c700 50%);
+        /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #10cc00 50%, #10c700 50%);
+        /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #10cc00 50%, #10c700 50%);
+        /* IE10+ */
+        background: linear-gradient(top, #10cc00 50%, #10c700 50%);
+        /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=0 );
+        /* IE6-9 */
+        border: solid 1px #10cc00;
+        letter-spacing: .05em;
+        color: #333; }
+        html body .btn.btn-primary[disabled] {
+          background-color: #086600;
+          border: solid 1px #086600;
+          opacity: .5; }
+        html body .btn.btn-primary:hover {
+          background: -moz-linear-gradient(top, #0da300 50%, #0c9900 50%);
+          /* FF3.6+ */
+          background: -webkit-linear-gradient(top, #0da300 50%, #0c9900 50%);
+          /* Chrome10+,Safari5.1+ */
+          background: -o-linear-gradient(top, #0da300 50%, #0c9900 50%);
+          /* Opera 11.10+ */
+          background: -ms-linear-gradient(top, #0da300 50%, #0c9900 50%);
+          /* IE10+ */
+          background: linear-gradient(top, #0da300 50%, #0c9900 50%);
+          /* W3C */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=0 );
+          /* IE6-9 */
+          border: solid 1px #0c9e00; }
+    html body select {
+      border-top-left-radius: 20px !important;
+      border-bottom-right-radius: 20px !important; }
+    html body .notify {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: .5em; }
+    html body .alert {
+      position: absolute;
+      left: 50%;
+      top: 10px;
+      min-width: 200px;
+      z-index: 10000; }
+    html body div.contextmenu {
+      position: absolute;
+      background: #fff;
+      border: solid 1px #ddd;
+      -webkit-box-shadow: 0 2px 6px #cdcdcd;
+      -moz-box-shadow: 0 2px 6px #cdcdcd;
+      box-shadow: 0 2px 6px #cdcdcd;
+      z-index: 2; }
+      html body div.contextmenu div.contextitem {
+        padding: 6px 8em 6px 30px;
+        white-space: nowrap;
+        cursor: pointer;
+        margin: 5px 0; }
+        html body div.contextmenu div.contextitem:hover {
+          background: #efefef; }
+    html body nav.navbar.navbar-default {
+      border-radius: 0;
+      background-color: #333;
+      border: none; }
+      html body nav.navbar.navbar-default div.container {
+        width: 100%; }
+        html body nav.navbar.navbar-default div.container ul.nav.navbar-nav {
+          width: 100%; }
+          html body nav.navbar.navbar-default div.container ul.nav.navbar-nav li {
+            top: 5px; }
+            html body nav.navbar.navbar-default div.container ul.nav.navbar-nav li span.caption {
+              color: #10cc00;
+              font-size: 18px; }
+            html body nav.navbar.navbar-default div.container ul.nav.navbar-nav li.logout {
+              top: 0;
+              float: right; }
+    html body .formContainer {
+      text-align: center; }
+      html body .formContainer .formCaption {
+        font-size: 25px;
+        padding-bottom: 10px; }
+      html body .formContainer .row {
+        margin: 10px 0; }
+    html body input {
+      padding: .5em 1.5em;
+      border: solid 1px #ccc;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      outline: none; }
+      html body input.error {
+        background-color: rgba(200, 28, 20, 0.2); }
+      html body input.success {
+        background-color: rgba(0, 200, 0, 0.2); }
+    html body div.row {
+      width: 100%;
+      padding-bottom: 15px; }
+      html body div.row div {
+        display: inline-block; }
+        html body div.row div.leftSide {
+          width: 200px;
+          float: left;
+          position: absolute; }
+        html body div.row div.rightSide {
+          width: 100%;
+          float: right;
+          padding-left: 200px; }
+      html body div.row.topLine div.leftSide {
+        text-align: center;
+        color: #c81c14;
+        font-size: 18px;
+        font-weight: bold; }
+      html body div.row.topLine div.rightSide {
+        text-align: center; }
+        html body div.row.topLine div.rightSide button {
+          margin: 0 5px; }
+        html body div.row.topLine div.rightSide .time {
+          padding: 0 10px; }
+      html body div.row.centralLine {
+        height: 100%;
+        padding: 0; }
+        html body div.row.centralLine div.leftSide {
+          text-align: center; }
+          html body div.row.centralLine div.leftSide .CList button, html body div.row.centralLine div.leftSide .CList .calendList {
+            display: block; }
+          html body div.row.centralLine div.leftSide .CList .create {
+            margin-bottom: 10px;
+            background: -moz-linear-gradient(top, #c81c14 50%, #c31b14 50%);
+            /* FF3.6+ */
+            background: -webkit-linear-gradient(top, #c81c14 50%, #c31b14 50%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #c81c14 50%, #c31b14 50%);
+            /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #c81c14 50%, #c31b14 50%);
+            /* IE10+ */
+            background: linear-gradient(top, #c81c14 50%, #c31b14 50%);
+            /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=0 );
+            /* IE6-9 */
+            border: solid 1px #c81c14;
+            font-weight: bold;
+            color: #fbfbfb; }
+            html body div.row.centralLine div.leftSide .CList .create:hover {
+              background: -moz-linear-gradient(top, #a31710 50%, #9a160f 50%);
+              /* FF3.6+ */
+              background: -webkit-linear-gradient(top, #a31710 50%, #9a160f 50%);
+              /* Chrome10+,Safari5.1+ */
+              background: -o-linear-gradient(top, #a31710 50%, #9a160f 50%);
+              /* Opera 11.10+ */
+              background: -ms-linear-gradient(top, #a31710 50%, #9a160f 50%);
+              /* IE10+ */
+              background: linear-gradient(top, #a31710 50%, #9a160f 50%);
+              /* W3C */
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=0 );
+              /* IE6-9 */
+              border: solid 1px #9e1610; }
+          html body div.row.centralLine div.leftSide .CList div.calendList div {
+            display: block; }
+          html body div.row.centralLine div.leftSide .CList div.calendList .list .item {
+            padding: 3px 7px;
+            margin: 3px 0;
+            border: solid 1px transparent;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px; }
+            html body div.row.centralLine div.leftSide .CList div.calendList .list .item .colored {
+              display: inline-block;
+              width: 10px;
+              height: 10px;
+              margin-right: 5px;
+              border: solid 1px #ccc; }
+            html body div.row.centralLine div.leftSide .CList div.calendList .list .item:hover {
+              background-color: #e6e6e6; }
+        html body div.row.centralLine div.rightSide .Calend {
+          width: 100%; }
+          html body div.row.centralLine div.rightSide .Calend thead tr th {
+            text-align: right;
+            padding-right: 5px; }
+          html body div.row.centralLine div.rightSide .Calend tr {
+            padding: 0;
+            margin: 0;
+            width: 100%; }
+            html body div.row.centralLine div.rightSide .Calend tr td {
+              border: solid 1px #ccc;
+              height: 100%;
+              width: 14%;
+              transition-duration: .08s; }
+              html body div.row.centralLine div.rightSide .Calend tr td .inner {
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding: 2px;
+                overflow: hidden; }
+                html body div.row.centralLine div.rightSide .Calend tr td .inner div.labelOverlay {
+                  width: 100%;
+                  display: block;
+                  text-align: right; }
+                html body div.row.centralLine div.rightSide .Calend tr td .inner .calendarEvent {
+                  white-space: nowrap;
+                  margin: 2px 0;
+                  height: 20px;
+                  transition-duration: .05s;
+                  display: block;
+                  overflow: hidden;
+                  padding: 0 3px; }
+                  html body div.row.centralLine div.rightSide .Calend tr td .inner .calendarEvent span.time {
+                    padding-right: 5px;
+                    font-weight: bold; }
+                  html body div.row.centralLine div.rightSide .Calend tr td .inner .calendarEvent:hover .eventInner {
+                    width: auto !important;
+                    white-space: normal;
+                    background-color: #474747;
+                    color: #fbfbfb;
+                    position: absolute; }
+              html body div.row.centralLine div.rightSide .Calend tr td.notCurrent {
+                background: #f0f0f0; }
+                html body div.row.centralLine div.rightSide .Calend tr td.notCurrent .inner span.label {
+                  color: #ccc; }
+              html body div.row.centralLine div.rightSide .Calend tr td.Current .inner span.label {
+                color: #333; }
+              html body div.row.centralLine div.rightSide .Calend tr td.Current.selected {
+                background-color: rgba(248, 255, 87, 0.4); }
+              html body div.row.centralLine div.rightSide .Calend tr td.Today {
+                background: rgba(159, 255, 159, 0.4); }
+                html body div.row.centralLine div.rightSide .Calend tr td.Today .inner span.label {
+                  color: #3b3b3b; }
+              html body div.row.centralLine div.rightSide .Calend tr td:hover {
+                background: #f0f0f0; }
+    html body div.modal div.modal-dialog div.modal-content div.modal-body form div.row, html body div.modal div.modal-dialog div.modal-content div.modal-body form .form-group {
+      width: 100%;
+      display: block;
+      margin: 0; }
+      html body div.modal div.modal-dialog div.modal-content div.modal-body form div.row input, html body div.modal div.modal-dialog div.modal-content div.modal-body form div.row select, html body div.modal div.modal-dialog div.modal-content div.modal-body form .form-group input, html body div.modal div.modal-dialog div.modal-content div.modal-body form .form-group select {
+        width: 100%; }
+
+@media (max-width: 700px) {
+  html body nav.navbar.navbar-default li {
+    display: inline-block; }
+    html body nav.navbar.navbar-default li.logout {
+      float: right; }
+  html body div.row.centralLine {
+    margin: 0;
+    padding: 0 15px; }
+  html body div.row div.leftSide {
+    display: none; }
+  html body div.row div.rightSide {
+    padding-left: 0; } }
+
+/*# sourceMappingURL=style.css.map */

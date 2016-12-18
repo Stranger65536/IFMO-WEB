@@ -1,0 +1,15 @@
+{
+    "login":"login",
+    "sign up":"sign up",
+    "username":"username",
+    "password":"password",
+    "first name":"first name",
+    "last name":"last name",
+    "email":"email",
+    "submit":"submit",
+    "save":"save",
+    "logout":"logout",
+    "retype":"retype",
+    "not yet a member":"not yet a member?",
+    "already a member":"already a member?"
+}
